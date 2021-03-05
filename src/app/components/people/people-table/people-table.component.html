@@ -1,0 +1,29 @@
+<div class="container p-4">
+    <h3 class="h-center">Personas</h3>
+    <div class="p-2">
+        <table class="table table-striped">
+            <thead class="table-light">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Sexo</th>
+                    <th>Documento</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let person of people">
+                    <td>{{person.name}}</td>
+                    <td>{{person.age}}</td>
+                    <td>{{person.gender}}</td>
+                    <td>{{person.document}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    
+    <app-people-form (personAdded)="onPersonAdded($event)"></app-people-form>
+
+</div>
